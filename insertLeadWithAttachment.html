@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Lead Form</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f4f4f4; /* Light gray background */
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            background-color: #fff; /* White background */
+            padding: 20px;
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+        }
+        table {
+            width: 100%;
+        }
+        table, th, td {
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd; /* Light gray border for table cells */
+        }
+        th {
+            background-color: #f2f2f2; /* Light gray background for table header */
+        }
+        button {
+            background-color: #4caf50; /* Green button color */
+            color: #fff; /* White text color */
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<center>
+    <h2>Create Lead</h2>
+
+    <form method="post" action="{{ url_for('submit') }}" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td><label for="firstName">First Name:</label></td>
+                <td><input type="text" id="firstName" name="firstName" required></td>
+            </tr>
+            <tr>
+                <td><label for="lastName">Last Name:</label></td>
+                <td><input type="text" id="lastName" name="lastName" required></td>
+            </tr>
+            <tr>
+                <td><label for="company">Company:</label></td>
+                <td><input type="text" id="company" name="company" required></td>
+            </tr>
+              <tr>
+                <td><label for="Email">Email:</label></td>
+                <td><input type="Email" id="Email" name="Email" required></td>
+            </tr>
+            <tr>
+                <td><label for="couponDiscount">Coupon Discount:</label></td>
+                <td><input type="text" id="couponDiscount" name="couponDiscount" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="file">Select a PDF file:</label></td>
+                <td><input type="file" id="file" name="file" accept=".pdf" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><button type="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+</center>
+
+</body>
+</html>
