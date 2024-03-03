@@ -8,10 +8,10 @@ import requests
 
 params = {
     "grant_type": "password",
-    "client_id": "3MVG929eOx29turGQ9qfKpzHNh5Z878vSkObxMKP56pNJ4GbYCNyjeCMbgeYs8XvPkxj0LswyAqnI9mWxGNI4",
-    "client_secret": "EF751433AF2DF98CCF65C86D25792E3314C343AFCC2FE5F47465B9D6EC210145",
-    "username": "gaurav_experience-cloud@kreyaconsulting.com",
-    "password": "g1a2u3r4ShKGCqycJfvdLGk0AIf5Smz3c"  # without any space
+    "client_id": "",
+    "client_secret": "",
+    "username": "",
+    "password": ""  # without any space
 }
 r = requests.post("https://login.salesforce.com/services/oauth2/token", params=params)
 access_token = r.json().get("access_token")
